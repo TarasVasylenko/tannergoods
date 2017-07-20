@@ -1,0 +1,184 @@
+@import "variables";
+@import "mixin";
+
+.slider-content {
+	position: static;
+	width: 65.2631%;
+	float: right;
+	margin-top: -2px;
+}
+
+.slick-vertical .slick-slide {
+	border: none;
+}
+
+.slick-dotted.slick-slider {
+	margin-bottom: 0;
+}
+
+.ion-ios-arrow-up:before { 
+	content: "\f3d8";
+	font-size: 2rem;
+}
+.ion-ios-arrow-down:before {
+	content: "\f3d0";
+	font-size: 2rem; 
+}
+
+.slick-prev {
+	left: 6%;
+	top: 30%;
+}
+
+.slick-next {
+	right: 0;
+	left: 6%;
+	top: 40%;
+}
+
+.slick-prev:before, 
+.slick-next:before {
+	color: #000;
+	opacity: 1;
+}
+
+.slick-prev:hover:before, 
+.slick-prev:focus:before, 
+.slick-next:hover:before, 
+.slick-next:focus:before {
+	color: #b8a47e;
+}
+
+
+.slick-dots {
+	top: 53%;
+	left: 6%;
+	width: 20px;
+	height: 150px;
+	margin: 0;
+	text-align: center;
+
+}
+
+.slick-dots li {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 20px;
+	margin: auto;
+	font-family: $title-font;
+	font-weight: bold;
+	font-size: 0.714rem;
+	list-style-type: none;
+	text-align: center;
+	/*border-radius: 50%;*/
+}
+
+.slick-dots li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.slide-0-content:before {
+	content: "01";
+}
+
+.slide-1-content:before {
+	content: "02";
+}
+
+.slide-2-content:before {
+	content: "03";
+}
+
+.slide-3-content:before {
+	content: "04";
+}
+
+.slide-4-content:before {
+	content: "05";
+}
+
+.slick-dots li:before {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	line-height: 1;
+	color: #878787;
+	transform: translate(-50%, -50%);	
+}
+
+li.slick-active {
+	transform: scale(2);
+	background: #fff;
+	font-weight: 400;
+	border-radius: 50%;
+	box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+li.slick-active:before {
+	color: #000;
+}
+
+.slick-dots button {
+	margin: auto;
+	opacity: 0;
+}
+
+.decor-buttons {
+	position: absolute;
+	width: 2px;
+	height: 25px;
+	left: 6.75%;
+	top: 45%;
+	background: #b8a47e;
+}
+
+.slider-content__descr {
+	position: absolute;
+	top: 50%;
+	left: 18%;
+	text-align: left;
+	p {
+		font-family: $title-font;
+		color: $color-title;
+	}
+	h2 {
+		margin-bottom: 30px;
+		color: $color-title;
+	}
+	a {
+		position: relative;
+		margin-left: 110px;
+		text-decoration: none;
+		color: $color-title;
+		@include transition($prop, $time, $funct);
+
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 45%;
+			left: -30px;
+			width: 20px;
+			height: 2px;
+			background: $font-color-1;
+		}
+		span {
+			margin-left: 10px;
+		}
+		
+		&:hover, &:hover span:before {
+			color: $color-theme;
+		}
+
+		&:hover:before {
+			background: $color-theme;
+		}
+	}
+}
+
+.ion-ios-arrow-right:before {
+	content: "\f3d3";
+	font-size: 1rem;
+}
